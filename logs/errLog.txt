@@ -1,0 +1,11 @@
+20240611	14:39:14	3b91d29b-9a3c-474d-8c49-6e86c7652da9	Error: Not allowed by CORS -> origin: https://chatgpt.com
+20240611	14:39:14	03597a7b-5927-4b42-90ac-9d1cb315b045	Error: Not allowed by CORS -> origin: https://chatgpt.com
+20240611	17:10:44	f580663c-c62d-489e-b93a-058ede484dd0	ReferenceError: new_emp is not defined -> origin: undefined
+20240611	17:53:12	1aaed961-ba8f-468c-9290-ba8b774c4c1c	SyntaxError: Expected ',' or '}' after property value in JSON at position 48 (line 4 column 3) -> origin: undefined
+20240611	18:02:07	27410487-1ca4-44ff-8dca-57243fcdda92	ReferenceError: err is not defined -> origin: undefined
+20240612	14:10:51	0f018055-f818-4edd-8bc7-bff971751da3	ReferenceError: authH is not defined -> origin: undefined
+20240613	14:05:49	1c2a56e6-3f8e-434c-aa5a-b44c45af48a1	TypeError: Cannot read properties of undefined (reading 'map') -> origin: undefined
+20240613	14:05:59	4c279884-b617-407c-a89f-ba90bf01c7cb	TypeError: Cannot read properties of undefined (reading 'map') -> origin: undefined
+20240613	14:06:00	8eee1a12-c493-4d81-bca2-74aab16cb7ee	TypeError: Cannot read properties of undefined (reading 'map') -> origin: undefined
+20240613	14:08:18	55fb8281-6a55-4134-91b3-f9c190054603	TypeError: Cannot read properties of undefined (reading 'user') -> origin: undefined
+20240613	14:08:25	77643da5-4159-4601-8b27-1c0c2636e603	TypeError: Cannot read properties of undefined (reading 'user') -> origin: undefined

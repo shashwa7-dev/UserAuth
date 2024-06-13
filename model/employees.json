@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "firstname": "Dave",
+    "lastname": "Gray",
+    "email": "abc@gmail.com"
+  },
+  {
+    "id": "9bf17b92-b2b5-496d-9ff7-10c51ae5b2e3",
+    "firstname": "Lex",
+    "lastname": "Fridman",
+    "email": "lexFrid@gmail.com"
+  }
+]
