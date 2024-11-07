@@ -39,7 +39,7 @@ app.use("/employees", verifyJWT, require("./routes/api/employees"));
 //middlewares--ENDS
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Hello World [Deployed V.01]!");
 });
 app.all("*", (req, res) => {
   res.status(404);
