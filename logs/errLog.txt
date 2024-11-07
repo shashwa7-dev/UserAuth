@@ -9,3 +9,13 @@
 20240613	14:06:00	8eee1a12-c493-4d81-bca2-74aab16cb7ee	TypeError: Cannot read properties of undefined (reading 'map') -> origin: undefined
 20240613	14:08:18	55fb8281-6a55-4134-91b3-f9c190054603	TypeError: Cannot read properties of undefined (reading 'user') -> origin: undefined
 20240613	14:08:25	77643da5-4159-4601-8b27-1c0c2636e603	TypeError: Cannot read properties of undefined (reading 'user') -> origin: undefined
+20240613	18:34:17	42dc3ae9-4178-4f50-83c4-6747e69456e8	Error: Not allowed by CORS -> origin: http://localhost:3000
+20240613	18:35:17	0f925874-c2e6-4aea-93c9-dbd1c6ae7528	TypeError: res.headers is not a function -> origin: http://localhost:3000
+20240613	18:35:18	b80a0821-5261-4a60-ac11-0cb450db2983	TypeError: res.headers is not a function -> origin: http://localhost:3000
+20240613	18:35:36	b460085a-9b12-4d90-b325-050ca837a0ce	TypeError: res.headers is not a function -> origin: http://localhost:3000
+20240613	18:36:19	a799f019-ad5d-439b-88fb-40ffae7a6931	TypeError: res.headers is not a function -> origin: http://localhost:3000
+20240613	18:36:29	8e4fa2e3-4c46-4008-8228-d4c4c9d7ca30	TypeError: res.headers is not a function -> origin: http://localhost:3000
+20240613	18:36:45	96269324-02ee-428f-9c29-9388a95c51ef	TypeError: res.headers is not a function -> origin: http://localhost:3000
+20240613	18:38:15	6794410a-b370-47f8-8e69-4af84cf4195c	TypeError: res.headers is not a function -> origin: http://localhost:3000
+20240613	18:38:45	e688a450-f3f9-450d-a851-76744f0bc152	TypeError: res.headers is not a function -> origin: http://localhost:3000
+20240613	18:38:46	edef65d6-5936-4c5a-9a4f-27094eb145c5	TypeError: res.headers is not a function -> origin: http://localhost:3000

@@ -1,6 +1,8 @@
 //use this incase just testing on thunderclient or postman
 const DEV = {
   httpOnly: true,
+  sameSite: "None",
+  secure: true,
 };
 
 //PROD also required while testing it on DEV FE

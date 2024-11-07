@@ -1,0 +1,40 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - auth/be
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18" # Change to your Node.js version if needed
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Deploy to EC2
+        env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          SERVER_OS: ${{ secrets.SERVER_OS }}
+          EC2_KEY: ${{ secrets.EC2_KEY }}
+          PROJECT_PATH: ${{ secrets.PROJECT_PATH }}
+        run: |
+          echo "$EC2_KEY" | tr -d '\r' > /tmp/test-server.pem
+          chmod 600 /tmp/test-server.pem
+          scp -i /tmp/test-server.pem -r ./* $SERVER_OS@$EC2_HOST:$PROJECT_PATH
+          ssh -i /tmp/test-server.pem $SERVER_OS@$EC2_HOST "cd $PROJECT_PATH && npm install && pm2 restart server.js"
+
+      - name: Clean up
+        run: rm -f /tmp/test-server.pem
