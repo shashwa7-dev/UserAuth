@@ -20,8 +20,8 @@ jobs:
           echo "$EC2_KEY" > keyfile
           chmod 600 keyfile
           mkdir -p ~/.ssh
-          cp known_hosts ~/.ssh/known_hosts
-          ssh -t -i keyfile ec2-user@ec2-13-60-216-82.eu-north-1.compute.amazonaws.com "
+          ssh-keyscan -H ec2-13-60-216-82.eu-north-1.compute.amazonaws.com >> ~/.ssh/known_hosts
+          ssh -i keyfile ec2-user@ec2-13-60-216-82.eu-north-1.compute.amazonaws.com "
             cd UserAuth
             git pull origin auth/be
             cd server
