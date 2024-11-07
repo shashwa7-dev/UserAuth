@@ -36,7 +36,7 @@ jobs:
             git pull origin auth/be
 
             # Restart the application using pm2
-            pm2 restart index.js || pm2 start index.js --name "user-auth-app"
+            pm2 restart server.js || pm2 start server.js --name "user-auth-app"
           EOF
 
           # Clean up SSH keyfile after use
