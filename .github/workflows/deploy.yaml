@@ -11,19 +11,33 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: SSH and deploy
+      - name: Set up SSH key and deploy
         env:
           EC2_KEY: ${{ secrets.EC2_KEY }}
         run: |
+          # Save EC2 Key to file and set proper permissions
           echo "$EC2_KEY" > keyfile
           chmod 600 keyfile
+
+          # Ensure the .ssh directory exists
           mkdir -p ~/.ssh
+
+          # Add the EC2 instance to the known hosts to prevent SSH authenticity prompt
           ssh-keyscan -H ec2-13-60-216-82.eu-north-1.compute.amazonaws.com >> ~/.ssh/known_hosts
-          ssh -i keyfile ec2-user@ec2-13-60-216-82.eu-north-1.compute.amazonaws.com "
+
+          # Deploy code and manage the app on EC2
+          ssh -i keyfile ec2-user@ec2-13-60-216-82.eu-north-1.compute.amazonaws.com << 'EOF'
+            # Ensure you're in the correct project directory
+            cd ~/UserAuth
+
+            # Pull latest changes
             git pull origin auth/be
-            cd UserAuth
-            pm2 kill
-            pm2 start index.js
-          "
+
+            # Restart the application using pm2
+            pm2 restart index.js || pm2 start index.js --name "user-auth-app"
+          EOF
+
+          # Clean up SSH keyfile after use
+          rm -f keyfile
